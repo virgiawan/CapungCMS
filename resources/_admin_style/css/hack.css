@@ -1,0 +1,63 @@
+
+.field-message{
+	color: #F00;
+	font-size: 9pt;
+	padding-left: 10px;
+}
+
+.div-error input[type="text"],input[type="checkbox"],input[type="radio"]{
+	border: 2px solid #F00;
+	background-color: rgba(255,226,127,0.20);
+}
+
+
+.div-error select{
+	border: 2px solid #F00;
+	background-color: rgba(255,226,127,0.20);
+}
+
+.link_manage{
+	text-decoration: none;
+	color:#2300ff;
+}
+
+.link_manage:hover{
+	text-decoration: underline;
+}
+
+/* MESSAGE CSS */
+.info, .success, .warning, .error, .validation {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding:15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-size:9pt;
+}
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('../img/info.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('../img/success.png');
+}
+.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('../img/warning.png');
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('../img/error.png');
+}
+
+.close-msg{
+	float: right;
+	font-weight: bolder;
+	color: grey;
+	text-decoration: none;
+}
