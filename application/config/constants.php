@@ -71,6 +71,10 @@ define('TERM_TYPE_CATEGORY',		'1');
 define('TERM_TYPE_TAG',				'2');
 /*-- END OF DEFINE CONSTANTA TERM TYPE --*/
 
+/*-- DEFINE CONSTANTA FOR USER ROLE --*/
+define('ROLE_SUPERADMIN',			'1');
+define('ROLE_ADMIN',				'2');
+/*-- END OF DEFINE CONSTANTA FOR USER ROLE --*/
 
 /*-- DEFINE CONSTANTA SITE TITLE --*/
 define('SITE_TITLE', 			'Capung CMS');
