@@ -25,7 +25,7 @@
 		<div class="field <?php echo form_error('publish_date')?'div-error':''; ?>">
 			<p>
 				<label for="publish_date">Publish date :</label>
-				<input type="text" placeholder="Please pick publish date" size="23" value="<?php echo date('d-m-Y')?>" name="publish_date"/>
+				<input class="datepicker" type="text" placeholder="Please pick publish date" size="23" value="<?php echo date('d-m-Y')?>" name="publish_date"/>
 				<?php echo form_error('publish_date','<span class="field-message">','</span>') ?>
 			</p>	
 		</div>

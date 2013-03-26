@@ -6,6 +6,7 @@
 <script type="text/javascript" src="<?php echo base_url('resources/_libraries/ckeditor/ckeditor.js')?>"></script>
 <script type="text/javascript" src="<?php echo base_url('resources/_libraries/jplayer/jquery.jplayer.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('resources/_libraries/jplayer/add-on/jquery.jplayer.inspector.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('resources/_libraries/jquery-ui-1.10.2.custom.min.js'); ?>" ></script>
 <script type="text/javascript" charset="utf-8">
 	$('document').ready(function(){
 		 
@@ -14,7 +15,12 @@
 	        "sScrollY": 300,
 	        "bJQueryUI": true,
 	        "sPaginationType": "full_numbers",
-        });//.fnSort( [ [1,'asc'] ] );
+        });
+
+		$('.datepicker').datepicker({
+			changeMonth: true,
+			dateFormat: 'dd-mm-yy',
+		});
         
         $('.capung_dashboard_table').dataTable({
 	        "sScrollY": 200,

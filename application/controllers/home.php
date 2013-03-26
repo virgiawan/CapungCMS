@@ -63,7 +63,7 @@ class Home extends MY_Controller{
 	}
 	
 	public function about_us(){
-		$post = Post::find(array('conditions'=>array('id = ? AND type_id = ?',1,POST_TYPE_PAGE)));
+		$post = Post::find(array('conditions'=>array('id = ? AND type_id = ?',2,POST_TYPE_PAGE)));
 		if(!isset($post)){
 	 		redirect('home');
  		}

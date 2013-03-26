@@ -16,4 +16,5 @@
 		<link rel="stylesheet" media="screen" type="text/css" href="<?php echo base_url('resources/_libraries/dataTable/theme/jquery-ui-1.8.4.custom.css'); ?>" />
 		<link rel="stylesheet" media="screen" type="text/css" href="<?php echo base_url('resources/_libraries/dataTable/css/demo_table_jui.css'); ?>" />
 		<link rel="stylesheet" media="screen" type="text/css" href="<?php echo base_url('resources/_libraries/jplayer/css/jplayer.blue.monday.css'); ?>" />
+		<link rel="stylesheet" media="screen" type="text/css" href="<?php echo base_url('resources/_libraries/smoothness/jquery-ui-1.10.1.custom.css'); ?>" />
 	</head>

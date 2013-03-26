@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 12, 2013 at 04:20 PM
+-- Generation Time: Mar 26, 2013 at 01:16 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.1
 
@@ -70,13 +70,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('0860fd75cc4684bec6ee0d9f0d11c044', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22', 1362565839, 'a:6:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:9:"user_name";s:5:"admin";s:10:"user_email";s:19:"admin@suitmedia.com";s:9:"user_role";i:1;s:13:"user_fullname";s:13:"Administrator";}'),
-('56321124a6f4d7392593843c29527960', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.99 Safari/537.22', 1361758853, 'a:3:{s:9:"user_name";s:5:"admin";s:13:"flash:old:msg";s:33:"You have successfully logged out.";s:18:"flash:old:msg_type";s:1:"1";}'),
-('5dae5b48591ec08db8f4144de909a667', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.99 Safari/537.22', 1361803875, 'a:8:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:9:"user_name";s:5:"admin";s:10:"user_email";s:19:"admin@suitmedia.com";s:9:"user_role";i:1;s:13:"user_fullname";s:13:"Administrator";s:13:"flash:old:msg";s:18:"Post ID not found.";s:18:"flash:old:msg_type";s:1:"2";}'),
-('75092055f17319f9eaf0a24f1f0242f2', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.160 Safari/537.22', 1363103145, 'a:6:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:9:"user_name";s:5:"admin";s:10:"user_email";s:19:"admin@suitmedia.com";s:9:"user_role";i:1;s:13:"user_fullname";s:13:"Administrator";}'),
-('78307c09d6eccdd431c92c848c05b69e', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.99 Safari/537.22', 1361851468, 'a:6:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:9:"user_name";s:5:"admin";s:10:"user_email";s:19:"admin@suitmedia.com";s:9:"user_role";i:1;s:13:"user_fullname";s:13:"Administrator";}'),
-('91fbfdf1fa076d3328d0e1beb74e1ac4', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.152 Safari/537.22', 1362576318, 'a:8:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:9:"user_name";s:5:"admin";s:10:"user_email";s:19:"admin@suitmedia.com";s:9:"user_role";i:1;s:13:"user_fullname";s:13:"Administrator";s:13:"flash:old:msg";s:20:"Post has been saved.";s:18:"flash:old:msg_type";s:1:"1";}'),
-('b81b5529145d233f6cd748ae250e10c6', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.99 Safari/537.22', 1361572362, 'a:1:{s:9:"user_data";s:0:"";}');
+('f8fa51ada3a275bed8f26100b10a3bb6', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22', 1364303584, 'a:8:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:10:"user_email";s:21:"admin@oranyemedia.com";s:9:"user_name";s:5:"admin";s:13:"user_fullname";s:13:"Administrator";s:9:"user_role";i:1;s:15:"captcha_session";s:6:"n7crHM";s:18:"captcha_image_name";d:1364303679.705914974212646484375;}');
 
 -- --------------------------------------------------------
 
@@ -147,16 +141,15 @@ CREATE TABLE IF NOT EXISTS `posts` (
   KEY `idx_published` (`is_published`),
   KEY `idx_featured` (`is_featured`),
   KEY `idx_slug` (`slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`id`, `type_id`, `author_id`, `publish_date`, `title`, `title_alt`, `resume`, `resume_alt`, `content`, `content_alt`, `thumbnail`, `filename`, `parent_post`, `order_num`, `slug`, `is_published`, `is_featured`, `is_commentable`, `count_view`, `count_comment`, `created_at`, `updated_at`) VALUES
-(2, 2, 1, '2013-02-22 23:08:25', 'coba artikel', '', '', '', '', '', '', '', NULL, 0, 'coba-artikel', 1, 0, 0, 4, 0, '2013-02-22 23:05:49', '2013-02-22 23:08:25'),
-(51, 1, 1, '2013-03-12 07:00:57', 'Test Article', 'adasd', 'Test article', 'test aja kk', '<p>Test aja</p>', '<p>test ya</p>', '', '64825_505859252798501_319780437_n.jpg', 0, 0, 'test-article', 1, 0, 1, 0, 0, '2013-03-12 03:36:14', '2013-03-12 07:00:57'),
-(52, 2, 1, '2013-03-12 15:14:59', 'Page 1', 'page 1 alt', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.', 'k;;kl;kl;kll;k', '<p>sadsadasas</p>', '<p>k;lklk;k;lk;l</p>', '', '66726_395182927243488_784608371_n.jpg', 0, 0, 'page-1', 1, 0, 0, 0, 0, '2013-03-12 12:49:41', '2013-03-12 15:14:59');
+(1, 1, 1, '2013-03-26 13:14:35', 'Lorem ipsum', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.', '', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.</p>', '', '', '', 0, 0, 'lorem-ipsum', 1, 0, 1, 4, 0, '2013-03-26 11:41:29', '2013-03-26 13:14:39'),
+(2, 2, 1, '2013-03-26 13:13:36', 'About Us', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.', '', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare mollis massa tempus viverra. Donec pulvinar lorem ut erat fermentum sit amet placerat elit hendrerit. Pellentesque ac est nec erat tincidunt tempor vitae id mi. Ut commodo, dui a consectetur sodales, velit neque volutpat eros, euismod lacinia metus odio ut quam. Praesent sapien diam, congue quis molestie convallis, ullamcorper id metus. Etiam eu tempus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ligula nunc, congue sit amet condimentum id, posuere id quam. Sed quis libero vitae lorem facilisis aliquam. Morbi id dolor ac eros pulvinar lobortis a eu quam.</p>', '', '', '', 0, 0, 'about-us', 1, 0, 0, 0, 0, '2013-03-26 13:13:36', '2013-03-26 13:13:36');
 
 -- --------------------------------------------------------
 
@@ -165,26 +158,22 @@ INSERT INTO `posts` (`id`, `type_id`, `author_id`, `publish_date`, `title`, `tit
 --
 
 CREATE TABLE IF NOT EXISTS `posts_has_terms` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `post_id` int(11) NOT NULL,
   `term_id` int(11) NOT NULL,
   `order_num` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_post_term` (`term_id`),
   KEY `fk_term_post` (`post_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=140 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `posts_has_terms`
 --
 
 INSERT INTO `posts_has_terms` (`id`, `post_id`, `term_id`, `order_num`) VALUES
-(134, 51, 1, 0),
-(135, 51, 5, 0),
-(136, 51, 19, 0),
-(137, 51, 21, 0),
-(138, 51, 20, 0),
-(139, 51, 22, 0);
+(3, 1, 1, 0),
+(4, 1, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -248,22 +237,15 @@ CREATE TABLE IF NOT EXISTS `terms` (
   KEY `fk_term_type` (`type_id`),
   KEY `fk_term_count` (`count`),
   KEY `idx_slug` (`slug`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `terms`
 --
 
 INSERT INTO `terms` (`id`, `name`, `description`, `slug`, `parent`, `order_num`, `type_id`, `count`) VALUES
-(1, 'Uncategorized', 'Uncategorized', NULL, 0, 0, 1, 1),
-(2, 'sapi', 'sapi', 'sapi', 0, 0, 2, 0),
-(3, 'ndut', 'ndut', 'ndut', 0, 0, 2, 0),
-(4, 'mpuh', 'mpuh', 'mpuh', 0, 1, 2, 0),
-(5, 'Informasi', '', 'informasi', 0, 0, 1, 1),
-(19, 'Huda', 'Huda', 'huda', 0, 0, 2, 1),
-(20, ' akbar', ' akbar', 'akbar', 0, 0, 2, 1),
-(21, ' hai hai', ' hai hai', 'hai_hai', 0, 0, 2, 1),
-(22, ' huhu', ' huhu', 'huhu', 0, 0, 2, 1);
+(1, 'Uncategorized', 'Uncategorized', NULL, 0, 0, 1, 5),
+(2, 'test', 'test', 'test', 0, 0, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -303,15 +285,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`),
   KEY `fk_user_role` (`role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `role_id`, `username`, `email`, `password`, `fullname`, `picture`, `active`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', 'admin@suitmedia.com', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', NULL, 1, '2013-02-22 17:32:53', '2013-02-22 17:32:53'),
-(2, NULL, '', NULL, NULL, NULL, NULL, NULL, '2013-03-10 15:11:06', '2013-03-10 15:11:06');
+(1, 1, 'admin', 'admin@oranyemedia.com', '9e8acaa70b4e6e6f809c9489dcab2267', 'Administrator', NULL, 1, '2013-02-22 17:32:53', '2013-03-23 17:14:12');
