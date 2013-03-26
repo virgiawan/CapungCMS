@@ -16,7 +16,7 @@
     <body>
         <div class="container">
             <header>
-                <h1><?php echo SITE_TITLE;?></h1>
+                <h1><img width="320" src="<?php echo base_url('resources/_login_style/img/capung-cms.png');?>" /></h1>
             </header>
             <section>				
                 <div id="container_demo" >

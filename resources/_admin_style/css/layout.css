@@ -20,9 +20,9 @@ body {
 
 h1 {
 	margin: 15px 0 10px 5px;
-	width: 225px;
-	height: 28px;
-	background: url(../img/transdmin-light.gif) no-repeat left top;
+	width: 300px;
+	height: 42px;
+	background: url(../img/capung-cms.png) no-repeat left top;
 }
 
 h1 a {
@@ -40,7 +40,7 @@ h1 span { display: none; }
 	height: 37px;
 	padding: 6px;
 	margin: 0 0 30px 0;
-	background: url(../img/top-menu-bg.gif) left top; 
+	background: url(../img/main-nav.png) left top no-repeat; 
 	/* We used a background image making the thick border and the thin one to keep the html structure simple */
 }
 
@@ -63,6 +63,7 @@ h1 span { display: none; }
 
 #mainNav li.logout {
 	float: right;
+	margin-right: 10px;
 	border-left: 1px solid #ddd;
 	border-right: none;
 }

@@ -115,7 +115,7 @@
 </div>
 
 <div id="container">
-	<h1><?php echo SITE_TITLE; ?>!</h1>
+	<h1><img src="<?php echo base_url('resources/_login_style/img/capung-cms.png');?>" /></h1>
 	
 		<div id="body">
 		<!-- LOAD CONTENT -->
