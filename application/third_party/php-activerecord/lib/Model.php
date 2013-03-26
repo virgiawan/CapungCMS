@@ -4,12 +4,7 @@
  */
 namespace ActiveRecord;
 
-/* require  */
-/**
-* to get exception class must require this file
-*/
 require_once "Exceptions.php";
-
 
 /**
  * The base class for your models.
@@ -562,7 +557,7 @@ class Model
 	 */
 	public function attribute_is_dirty($attribute)
 	{
-		return $this->__dirty && isset($this->__dirty[$attribute]) && array_key_exists($attribute, $this->attributes);
+		return $this->__dirty && $this->__dirty[$attribute] && array_key_exists($attribute, $this->attributes);
 	}
 
 	/**
@@ -1355,8 +1350,8 @@ class Model
 			$options['conditions'] = SQLBuilder::create_conditions_from_underscored_string(static::connection(),substr($method,9),$args,static::$alias_attribute);
 			return static::count($options);
 		}
-		throw new ActiveRecordException("Call to undefined method: $method");
 
+		throw new ActiveRecordException("Call to undefined method: $method");
 	}
 
 	/**
@@ -1389,7 +1384,6 @@ class Model
 		}
 
 		throw new ActiveRecordException("Call to undefined method: $method");
-		
 	}
 
 	/**

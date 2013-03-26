@@ -113,8 +113,9 @@ h1 span { display: none; }
 #sidebar .sideNav li a:hover { background: #fdfcf6; }
 
 #sidebar .sideNav li a.active, #sidebar .sideNav li a.active:hover {
-	background: #f0f7fa;
+	background: #e0e7ea;
 	color: #c66653;
+	font-weight: bolder;
 }
 
 /* Breadcrumb ---------------------------------------- */

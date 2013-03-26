@@ -565,8 +565,6 @@ class Validations
 		$configuration = array_merge(self::$DEFAULT_VALIDATION_OPTIONS, array(
 			'message' => Errors::$DEFAULT_ERROR_MESSAGES['unique']
 		));
-		// Retrieve connection from model for quote_name method
-		$connection = $this->klass->getMethod('connection')->invoke(null);
 
 		foreach ($attrs as $attr)
 		{
@@ -587,20 +585,19 @@ class Validations
 
 			$sql = "";
 			$conditions = array("");
-			$pk_quoted = $connection->quote_name($pk[0]);
+
 			if ($pk_value === null)
-				$sql = "{$pk_quoted} IS NOT NULL";
+				$sql = "{$pk[0]} is not null";
 			else
 			{
-				$sql = "{$pk_quoted} != ?";
+				$sql = "{$pk[0]}!=?";
 				array_push($conditions,$pk_value);
 			}
 
 			foreach ($fields as $field)
 			{
 				$field = $this->model->get_real_attribute_name($field);
-				$quoted_field = $connection->quote_name($field);
-				$sql .= " AND {$quoted_field}=?";
+				$sql .= " and {$field}=?";
 				array_push($conditions,$this->model->$field);
 			}
 

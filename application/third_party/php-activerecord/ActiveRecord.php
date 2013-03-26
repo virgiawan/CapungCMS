@@ -1,10 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-
 function initialize_php_activerecord() {
-
     if (!defined('PHP_VERSION_ID') || PHP_VERSION_ID < 50300)
-        die('PHP ActiveRecord requires PHP 5.3 or higher');
+    	die('PHP ActiveRecord requires PHP 5.3 or higher');
 
     define('PHP_ACTIVERECORD_VERSION_ID','1.0');
 
@@ -19,7 +17,7 @@ function initialize_php_activerecord() {
         spl_autoload_register('activerecord_autoload', false, PHP_ACTIVERECORD_AUTOLOAD_PREPEND);
         spl_autoload_register('activerecord_lib_autoload', false, PHP_ACTIVERECORD_AUTOLOAD_PREPEND);
     }
-
+    
     // The Utils.php file has some namespaced procedural functions, so we must require it manually.
     require 'lib/Utils'.EXT;
 
@@ -49,21 +47,12 @@ function initialize_php_activerecord() {
 
 function activerecord_lib_autoload($class_name)
 {
-   /* $replace = array(
-        "ActiveRecord\RecordNotFound"             =>"ActiveRecord\Exceptions",
-        "ActiveRecord\DatabaseException"          =>"ActiveRecord\Exceptions",
-        "ActiveRecord\UndefinedPropertyException" =>"ActiveRecord\Exceptions",
-        "ActiveRecord\Exceptions"	=> "ActiveRecord\Exceptions"
-    );*/
-    
-    if (isset($replace[$class_name])) $class_name = $replace[$class_name]; 
-
     $lib_path = APPPATH.'third_party/php-activerecord/lib/';
-
+    
     if (strpos($class_name, 'ActiveRecord') !== FALSE) 
     {
         $class = substr($class_name, strpos($class_name, '\\')+1);
-
+        
         if (file_exists($lib_path.$class.EXT))
             require $lib_path.$class.EXT;
     }
@@ -71,22 +60,24 @@ function activerecord_lib_autoload($class_name)
 
 function activerecord_autoload($class_name)
 {
-    $path = ActiveRecord\Config::instance()->get_model_directory();
-    $root = realpath(isset($path) ? $path : '.');
+	$path = ActiveRecord\Config::instance()->get_model_directory();
+	$root = realpath(isset($path) ? $path : '.');
 
-    if (($namespaces = ActiveRecord\get_namespaces($class_name)))
-    {
-        $class_name = array_pop($namespaces);
-        $directories = array();
+	if (($namespaces = ActiveRecord\get_namespaces($class_name)))
+	{
+		$class_name = array_pop($namespaces);
+		$directories = array();
 
-        foreach ($namespaces as $directory)
-            $directories[] = $directory;
+		foreach ($namespaces as $directory)
+			$directories[] = $directory;
 
-        $root .= DIRECTORY_SEPARATOR . implode($directories, DIRECTORY_SEPARATOR);
-    }
+		$root .= DIRECTORY_SEPARATOR . implode($directories, DIRECTORY_SEPARATOR);
+	}
 
-    $file = "$root/$class_name".EXT;
+	$file = "$root/$class_name".EXT;
 
-    if (file_exists($file))
-        require $file;
+	if (file_exists($file))
+		require $file;
 }
+
+?>

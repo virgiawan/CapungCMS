@@ -295,7 +295,7 @@ p.change_link{
 	position: absolute;
 	top: 0px;
 	width: 88%;	
-	padding: 18px 6% 60px 6%;
+	padding: 18px 6% 10px 6%;
 	margin: 0 0 35px 0;
 	background: rgb(247, 247, 247);
 	border: 1px solid rgba(147, 184, 189,0.8);
@@ -380,4 +380,53 @@ p.change_link{
 	position: absolute;
 	height: 90px;
 	background: transparent;
+}
+
+/*
+*	Add style by Virgiawan Huda Akbar
+*	Oranyemedia[dot]com
+*/
+
+.field-message{
+	color: #F00;
+	font-size: 9pt;
+	padding-left: 10px;
+	float:right;
+}
+
+/* MESSAGE CSS */
+.info, .success, .warning, .error, .validation {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding:15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-size:9pt;
+}
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('img/info.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image:url('img/success.png');
+}
+.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('img/warning.png');
+}
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('img/error.png');
+}
+
+.close-msg{
+	float: right;
+	font-weight: bolder;
+	color: grey;
+	text-decoration: none;
 }

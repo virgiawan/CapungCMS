@@ -137,16 +137,24 @@ class MY_Controller extends CI_Controller {
         $this->load->library('Auth');
         if ($this->auth->is_logged_in())
         {
-            redirect(base_url());
+            redirect(base_url('admin/dashboard'));
         }
     }
 
     protected function redirect_if_not_logged_in()
     {
         $this->load->library('Auth');
-        if ( ! $this->auth->is_logged_in())
+        if (!$this->auth->is_logged_in())
         {
-            redirect(site_url('login'));
+            redirect(site_url('admin/login'));
         }
     }
+    
+    protected function redirect_if_not_superadmin(){
+	    $this->load->library('Auth');
+	    if(!$this->auth->is_superadmin_role()){
+		    redirect(site_url('admin/login'));
+	    }
+    }
+    
 }
