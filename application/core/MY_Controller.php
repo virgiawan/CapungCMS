@@ -16,15 +16,15 @@
 
 class MY_Controller extends CI_Controller {
 
-	/* Define attribute */    
+	/*-- Define attribute --*/    
     protected $before_filter   = array(
         // Example
         // 'action'    => 'redirect_if_not_logged_in',
     );
-
     protected $after_filter    = array();
-    
 	protected $data;
+	protected $default_layout;
+	
 	
 	/*-- Constructor --*/
 	public function __construct(){
@@ -34,6 +34,7 @@ class MY_Controller extends CI_Controller {
 		ActiveRecord\DateTime::$FORMATS['datetime_db'] = 'Y-m-d H:i:s';
 		ActiveRecord\DateTime::$FORMATS['date'] = 'd-m-Y';
 		ActiveRecord\DateTime::$FORMATS['date_db'] = 'Y-m-d';
+		$this->default_layout = $this->get_layout();
 	}
 
     // Utilize _remap to call the filters at respective times
@@ -156,5 +157,28 @@ class MY_Controller extends CI_Controller {
 		    redirect(site_url('admin/login'));
 	    }
     }
+
+	/*
+	* 
+	* Mobile detected
+	* method for detect is mobile device or not
+	* @return $default_layout
+	* $default_layout is variable that contains layout
+	*
+	*/
+	
+	protected function get_layout(){
+		$this->load->library('mobile_detect/mobile_detect');
+		if($this->mobile_detect->isMobile()){ // is mobile accessed this site
+			$public_layout = 'public/template/layout';
+		}
+		else if($this->mobile_detect->isTablet()){ // is tablet accessed this site
+			$public_layout = 'public/template/layout';
+		}
+		else{
+			$public_layout = 'public/template/layout';
+		}
+		return $public_layout;
+	}
     
 }

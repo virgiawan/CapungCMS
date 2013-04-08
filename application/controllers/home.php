@@ -31,7 +31,7 @@ class Home extends MY_Controller{
 		$this->pagination->initialize($config);
 		$this->data['pagination'] = $this->pagination->create_links();
 		$this->data['content'] = 'public/home/index';
-		$this->load->view('public/template/layout',$this->data);
+		$this->load->view($this->default_layout,$this->data);
 	}
 	
 	public function article($id='',$slug=''){
@@ -59,7 +59,7 @@ class Home extends MY_Controller{
  		$this->data['captcha']	= $cap['image']; 
  		$this->data['post'] 	= $post;
  		$this->data['content']	= 'public/home/show_article';
- 		$this->load->view('public/template/layout',$this->data);
+ 		$this->load->view($this->default_layout,$this->data);
 	}
 	
 	public function about_us(){
@@ -69,7 +69,7 @@ class Home extends MY_Controller{
  		}
  		$this->data['post']		= $post;
  		$this->data['content']	= 'public/home/about_us';
- 		$this->load->view('public/template/layout',$this->data);
+ 		$this->load->view($this->default_layout,$this->data);
 	}
 	
 	public function tag($id='',$slug=''){
@@ -79,7 +79,7 @@ class Home extends MY_Controller{
  		}
  		$this->data['term']		= $term;
  		$this->data['content']	= 'public/home/posts_tag';
- 		$this->load->view('public/template/layout',$this->data);
+ 		$this->load->view($this->default_layout,$this->data);
 	}
 	
 	public function category($id='',$slug=''){
@@ -90,7 +90,7 @@ class Home extends MY_Controller{
  		}
  		$this->data['term']		= $term;
  		$this->data['content']	= 'public/home/posts_category';
- 		$this->load->view('public/template/layout',$this->data);		
+ 		$this->load->view($this->default_layout,$this->data);		
 	}
 	
 	/*-- callback --*/

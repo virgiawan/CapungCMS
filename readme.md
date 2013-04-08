@@ -10,6 +10,7 @@
 3. Manage terms are like categories and tag
 4. Commenting sistem with captcha
 5. WYSIWYG editor using CKEditor
+6. Mobile detect (Detect what device that access this site).
 
 
 ##################################
@@ -24,6 +25,7 @@
 7. jPlayer 2.2.0
 8. transdmin_light (template for ui backend)
 9. CodeIgniter-Filter 0.0.2 by Matthew Machuga
+10. Mobile detect 3.0
 
 
 ##################################
@@ -41,7 +43,6 @@
 2. Integrate with FB, Twitter
 3. Using ReCaptcha, shareIT
 4. Manage advertising
-5. Mobile detect
 6. Sample front end UI as default UI
 7. Forgot password
 8. Can send email
