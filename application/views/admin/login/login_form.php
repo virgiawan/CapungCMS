@@ -38,7 +38,8 @@
                                 <p>
                                 	<label for="captcha" class="youpasswd"> Captcha </label>
                                 	<br/><?php echo $captcha;?>
-                                	<input id="captcha" name="captcha" required="required"  type="text" placeholder="captcha" /> 
+                                	<input id="captcha" name="captcha" required="required"  type="text" placeholder="captcha" />
+                                    <span style="font-size:10pt;"><a href="<?php echo site_url('admin/login/forgot_password');?>">Forget Password?</a></span> 
                                 </p>
                                 <p class="login button" style="margin-top:20px;"> 
                                     <input type="submit" value="Login" /> 

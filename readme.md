@@ -44,7 +44,6 @@
 3. Using ReCaptcha, shareIT
 4. Manage advertising
 6. Sample front end UI as default UI
-7. Forgot password
 8. Can send email
 9. Add mailchimp
 10. Upload progress bar using uplodify

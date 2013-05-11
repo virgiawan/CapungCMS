@@ -4,6 +4,7 @@ class Auth{
 	
 	/*-- attribute --*/
 	protected $ci;
+	protected $salt = 'CAPUNGCMS[at]ORANYEMEDIA[dot]COM';
 	
 	/*-- constructor --*/
 	public function __construct(){
@@ -88,6 +89,39 @@ class Auth{
 	
 	public function encrypt($plain_text){
 		return md5((sha1(md5('!@#'.$plain_text.'$%^'))));
+	}
+
+	public function generate_token($email=''){
+		$user = User::find(array('conditions'=>array('email = ?',$email)));
+		if(!isset($user)){ 
+			return FALSE;
+		}
+		else{
+			$time = time();
+			$user_id = $user->id;
+			$pass = $user->password;
+
+			return dechex($time).'-'.dechex($user_id).'-'.sha1($user_id.$time.$pass.$this->salt);
+		}
+	}
+
+	public function validate_token($token=''){
+		$items = preg_split('/[-]/', $token);    
+		if(!isset($items[0]) || !isset($items[1]) || !isset($items[2])) return FALSE;
+
+		$time = hexdec($items[0]);
+		if((time()-$time)>3600) return FALSE;
+
+		$user_id = hexdec($items[1]);    
+		$hash = $items[2];
+
+		$user = User::find($user_id);
+		if(!isset($user)) return FALSE;
+
+		$pass = $user->password;
+		$check = sha1($user_id.$time.$pass.$this->salt);
+
+		return ($hash == $check) ? $user_id : FALSE;
 	}
 	
 }

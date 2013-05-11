@@ -28,11 +28,8 @@ function initialize_php_activerecord() {
     if ($db) {
         foreach ($db as $name => $db_values) {
             // Convert to dsn format
-            $dsn[$name] = $db[$name]['dbdriver'] .
-                '://'   . $db[$name]['username'] .
-                ':'     . $db[$name]['password'] .
-                '@'     . $db[$name]['hostname'] .
-                '/'     . $db[$name]['database'];
+            // must be 1 line, fixed by Aliyil
+            $dsn[$name] = $db[$name]['dbdriver'].'://'.$db[$name]['username'].':'.$db[$name]['password'].'@'.$db[$name]['hostname'].'/'.$db[$name]['database'];
         }
     } 
 
