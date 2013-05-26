@@ -5,6 +5,7 @@ class Auth{
 	/*-- attribute --*/
 	protected $ci;
 	protected $salt = 'CAPUNGCMS[at]ORANYEMEDIA[dot]COM';
+	protected $fb_profile = array();
 	
 	/*-- constructor --*/
 	public function __construct(){
@@ -122,6 +123,53 @@ class Auth{
 		$check = sha1($user_id.$time.$pass.$this->salt);
 
 		return ($hash == $check) ? $user_id : FALSE;
+	}
+
+	/*
+	| ==========================================================================
+	| Facebook Oauth using API Graph
+	| ==========================================================================
+	*/
+
+	public function is_fb_login(){
+		$this->ci->load->library('facebook');
+		$user = $this->ci->facebook->getUser();
+		if($user!=0){
+        	return TRUE;
+        }
+        else{
+        	return FALSE;
+        }
+	}
+
+	public function fb_auth_process(){
+		$this->ci->load->library('facebook');
+		$user = $this->ci->facebook->getUser();
+		if($user){
+            try {
+                $this->fb_profile = $this->ci->facebook->api('/me');
+            } catch (FacebookApiException $e) {
+                $user = null;
+            }
+        }
+
+        if($user){
+           $url = $this->ci->facebook->getLogoutUrl();
+        }else{
+           $url = $this->ci->facebook->getLoginUrl();
+        }
+
+        return $url;
+	}
+
+	public function get_fb_profile(){
+		return $this->fb_profile;
+	}
+
+	public function destroy_fb_profile(){
+		$this->ci->load->library('facebook');
+		$this->fb_profile = array();
+		$this->ci->facebook->destroySession();
 	}
 	
 }

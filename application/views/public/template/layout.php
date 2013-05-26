@@ -106,7 +106,7 @@
 
 </head>
 <body>
-
+	 
 <div id="main-nav">
   <ul>
     <li><?php echo anchor('home','Home') ?></li>

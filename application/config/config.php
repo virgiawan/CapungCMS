@@ -365,13 +365,15 @@ $config['proxy_ips'] = '';
 |--------------------------------------------------------------------------
 |
 | is_dual_lang			= dual language support
-							=> TRUE 	= dual language active
-							=> FALSE	= dual language inactive
+|							=> TRUE 	= dual language active
+|							=> FALSE	= dual language inactive
+| fb_comment			= comment using facebook
+|							=> TRUE 	= comment using facebook active
+|							=> FALSE 	= comment using facebook inactive
 |
 */
 $config['capung_dual_lang'] 	= TRUE;
-
-
+$config['fb_comment']			= TRUE;
 
 
 /* End of file config.php */

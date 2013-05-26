@@ -45,6 +45,9 @@ class MY_Controller extends CI_Controller {
         {
             empty($params) ? $this->{$method}() : call_user_func_array(array($this, $method), $params);
         }
+        else{ // if method not exists, method not exist alias page not found
+            show_404(); // fix by Virgiawan Huda Akbar
+        }
         $this->after_filter();
     }
 

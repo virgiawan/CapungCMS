@@ -41,3 +41,7 @@
 <?php if($post->is_commentable):?>
 	<?php $this->load->view('public/home/_comment_form'); ?>
 <?php endif;?>
+
+<?php if($post->is_commentable and $this->config->item('fb_comment')):?>
+	<?php $this->load->view('composite/_form_fb_comment')?>
+<?php endif;?>

@@ -1,6 +1,8 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Home extends MY_Controller{
+
+	protected $before_filter   = array();
 	
 	/*-- constructor --*/
 	public function __construct(){
