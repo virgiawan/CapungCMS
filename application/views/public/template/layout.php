@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title><?php echo SITE_TITLE;?></title>
 
 	<style type="text/css">
 
@@ -101,6 +101,10 @@
 	    padding: 5px;
 	    float: left;
     }
+
+    #header, #footer{
+    	background: #f6f6f6;
+    }
 	
 </style>
 
@@ -115,7 +119,9 @@
 </div>
 
 <div id="container">
-	<h1><img src="<?php echo base_url('resources/_login_style/img/capung-cms.png');?>" /></h1>
+	<div id="header">
+		<h1><img src="<?php echo base_url('resources/_login_style/img/capung-cms.png');?>" /></h1>
+	</div>
 	
 		<div id="body">
 		<!-- LOAD CONTENT -->
@@ -123,7 +129,9 @@
 		<!-- END OF LOAD CONTENT -->
 		</div>
 		
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<div id="footer">
+		<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	</div>
 </div>
 
 </body>
