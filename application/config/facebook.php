@@ -4,8 +4,8 @@
 | FACEBOOK SDK CONFIG
 | ---------------------------------------------------------------
 */
-$config['appId']		= '639933499368522';
-$config['secret']		= '961dc13ee21bd0e699f3c660831da074';
+$config['appId']		= '';
+$config['secret']		= '';
 $config['data-href']	= 'http://localhost/capungcms';
 
 /* End of file facebook.php */

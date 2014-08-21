@@ -49,7 +49,7 @@
         <!-- END OF CONTAINER HOLDER -->
         
         
-        <p id="footer">CapungCMS &copy; <a href="http://oranyemedia.com">oranyemedia.com</a> 2013</p>
+        <p id="footer">CapungCMS &copy; <a href="#">Virgiawan Huda Akbar</a> 2013</p>
     </div>
     <!-- END OF WRAPPER -->
     

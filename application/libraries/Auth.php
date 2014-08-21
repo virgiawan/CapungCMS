@@ -4,7 +4,7 @@ class Auth{
 	
 	/*-- attribute --*/
 	protected $ci;
-	protected $salt = 'CAPUNGCMS[at]ORANYEMEDIA[dot]COM';
+	protected $salt = 'CAPUNGCMS';
 	protected $fb_profile = array();
 	
 	/*-- constructor --*/

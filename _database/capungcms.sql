@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('f8fa51ada3a275bed8f26100b10a3bb6', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22', 1364303584, 'a:8:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:10:"user_email";s:21:"admin@oranyemedia.com";s:9:"user_name";s:5:"admin";s:13:"user_fullname";s:13:"Administrator";s:9:"user_role";i:1;s:15:"captcha_session";s:6:"n7crHM";s:18:"captcha_image_name";d:1364303679.705914974212646484375;}');
+('f8fa51ada3a275bed8f26100b10a3bb6', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22', 1364303584, 'a:8:{s:9:"user_data";s:0:"";s:7:"user_id";i:1;s:10:"user_email";s:21:"admin@antahberantah.com";s:9:"user_name";s:5:"admin";s:13:"user_fullname";s:13:"Administrator";s:9:"user_role";i:1;s:15:"captcha_session";s:6:"n7crHM";s:18:"captcha_image_name";d:1364303679.705914974212646484375;}');
 
 -- --------------------------------------------------------
 
@@ -295,4 +295,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `username`, `email`, `password`, `fullname`, `picture`, `active`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', 'admin@oranyemedia.com', '9e8acaa70b4e6e6f809c9489dcab2267', 'Administrator', NULL, 1, '2013-02-22 17:32:53', '2013-03-23 17:14:12');
+(1, 1, 'admin', 'admin@antahberantah.com', '9e8acaa70b4e6e6f809c9489dcab2267', 'Administrator', NULL, 1, '2013-02-22 17:32:53', '2013-03-23 17:14:12');
